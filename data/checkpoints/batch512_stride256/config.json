@@ -1,0 +1,41 @@
+{
+  "training_config": {
+    "run_name": "dataset_stitched_stride256",
+    "model_size": "b2",
+    "num_channels": 6,
+    "num_labels": 3,
+    "resolution": 0.02,
+    "k_neighbors": 60,
+    "channel_order": [
+      "height_above_ground",
+      "verticality",
+      "intensity",
+      "red",
+      "green",
+      "blue"
+    ],
+    "label_map": {
+      "0": "unlabeled",
+      "1": "ground",
+      "2": "road"
+    },
+    "patch_size": 512,
+    "trained_epochs_requested": 50,
+    "lr": 6e-05,
+    "batch_size": 8,
+    "grad_accum_steps": 2,
+    "warmup_epochs": 5,
+    "weight_decay": 0.01,
+    "seed": 42,
+    "data_dir": "/home/sabbir/My_Projects/SegFormer/data/dataset_stitched_stride256/",
+    "created": "2026-06-24 09:30"
+  },
+  "inference_config": {
+    "input_folder": "",
+    "single_file": "",
+    "output_folder": "",
+    "run_option": "folder",
+    "inference_stride": 256,
+    "min_valid_ratio": 0.1
+  }
+}
